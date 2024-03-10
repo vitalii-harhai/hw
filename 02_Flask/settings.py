@@ -1,6 +1,9 @@
 # Constraints
 LIMIT_DATABASE_QUERIES = 1000
 
+# DATABASE
+DB_NAME = '../chinook.db'
+
 # File paths
 CSV_FILE_PATH_STUDENTS = 'students.csv'
 
