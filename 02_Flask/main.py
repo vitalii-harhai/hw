@@ -7,7 +7,7 @@ import route_all_info_about_track
 import route_get_bitcoin_value
 import route_calculate_hours
 import route_get_sales
-import settings
+import route_stats_city
 app = Flask(__name__)
 
 
@@ -55,6 +55,11 @@ def get_all_info_about_track_page():
 @app.route('/calculate-all-tracks-hours')
 def calculate_hours_all_tracks_page():
     return route_calculate_hours.calculate_all_track_hours()
+
+
+@app.route('/stats-by-city')
+def stats_by_city_page():
+    return route_stats_city.stats_by_city()
 
 
 if __name__ == '__main__':
