@@ -30,8 +30,9 @@ class Circle:
         self.y = y
         self.radius = radius
 
-    def contains(self, point: Point) -> bool:
+    def __contains__(self, point: Point) -> bool:
         """
+        Redefine __contains__ method
         Check if point is inside circle
         If distance between radius and center <= radius then point is inside circle else point is outside
         Distance = sqrt (x1 - x2) ** 2 + (y1 - y2) ** 2
@@ -39,7 +40,12 @@ class Circle:
         :return: True if point is inside else False
         """
         distance = sqrt(abs((point.x - self.x) ** 2 + (point.y - self.y) ** 2))
-        if distance <= self.radius:
-            return True
-        else:
-            return False
+        return distance <= self.radius
+
+
+my_circle = Circle(0, 0, 10)
+my_point1 = Point(0, 10)
+my_point2 = Point(0, 11)
+
+print(my_point1 in my_circle)
+print(my_point2 in my_circle)
