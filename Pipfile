@@ -24,6 +24,7 @@ urllib3 = "==2.2.1"
 werkzeug = "==3.0.1"
 faker = "*"
 webargs = "*"
+colorama = "*"
 
 [dev-packages]
 
